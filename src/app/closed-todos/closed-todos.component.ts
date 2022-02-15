@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Todo} from "../todo";
+import {TodoService} from "../todo.service";
 
 @Component({
   selector: 'app-closed-todos',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./closed-todos.component.css']
 })
 export class ClosedTodosComponent implements OnInit {
+  title = 'Closed Todo';
+  todos: Todo[] = [];
 
-  constructor() { }
+  constructor(private todoService: TodoService) {
+
+  }
 
   ngOnInit(): void {
+    this.todoService.get_closed_todos().subscribe(todos => this.todos = todos);
   }
 
 }

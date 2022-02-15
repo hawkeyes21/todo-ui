@@ -17,7 +17,7 @@ export class OpenTodosComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.todoService.get().subscribe(todos => this.todos = todos);
+    this.todoService.get_open_todos().subscribe(todos => this.todos = todos);
   }
 
   onSubmit(form: NgForm) {

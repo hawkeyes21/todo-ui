@@ -16,7 +16,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.todoService.get().subscribe(todos => this.todos = todos);
+    // this.todoService.get().subscribe(todos => this.todos = todos);
   }
 
 }

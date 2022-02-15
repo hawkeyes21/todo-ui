@@ -15,7 +15,11 @@ export class TodoService {
     return this.httpClient.post<Todo>("http://localhost:8080/todos", todo);
   }
 
-  get() {
+  get_open_todos() {
     return this.httpClient.get<Todo[]>("http://localhost:8080/todos/open");
+  }
+
+  get_closed_todos() {
+    return this.httpClient.get<Todo[]>("http://localhost:8080/todos/closed");
   }
 }
