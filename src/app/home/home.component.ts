@@ -25,4 +25,12 @@ export class HomeComponent implements OnInit {
       this.todos.push(todo);
     });
   }
+
+  fieldsChange(values: any) {
+    let todo: Todo = {id: values.id, title: values.title, status: values.status};
+    this.todoService.mark_a_open_todo_as_close(todo).subscribe(todo => {
+      console.log(todo.id, "\t", todo.title, "\t", todo.status);
+      this.ngOnInit();
+    });
+  }
 }

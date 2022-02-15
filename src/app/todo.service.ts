@@ -22,4 +22,8 @@ export class TodoService {
   get_closed_todos() {
     return this.httpClient.get<Todo[]>("http://localhost:8080/todos/closed");
   }
+
+  mark_a_open_todo_as_close(todo: Todo) {
+    return this.httpClient.patch<Todo>("http://localhost:8080/todos", todo);
+  }
 }

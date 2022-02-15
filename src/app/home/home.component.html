@@ -5,5 +5,5 @@
 </form>
 
 <li *ngFor="let todo of todos">
-  {{todo.id}} - {{ todo.title}} - {{todo.status}}
+  <input type="checkbox" (change)="fieldsChange(todo)" value="angular"> {{todo.id}} - {{ todo.title}} - {{todo.status}}
 </li>
