@@ -1,12 +1,6 @@
-<div class="content" role="main">
-
-  <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-    <input name="title" ngModel required #title="ngModel">
-    <button>Submit</button>
-  </form>
+<p> OPEN TODOS</p>
 
   <li *ngFor="let todo of todos">
-    {{ todo.title}}
+    {{todo.id}} - {{ todo.title}} - {{todo.status}}
   </li>
 
-</div>

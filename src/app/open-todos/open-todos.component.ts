@@ -20,11 +20,4 @@ export class OpenTodosComponent implements OnInit {
     this.todoService.get_open_todos().subscribe(todos => this.todos = todos);
   }
 
-  onSubmit(form: NgForm) {
-    let todo: Todo = {title: form.value.title, status: "OPEN"};
-    this.todoService.save(todo).subscribe(todo => {
-      console.log("Saved", todo);
-      this.todos.push(todo);
-    });
-  }
 }

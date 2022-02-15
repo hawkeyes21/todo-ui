@@ -1,1 +1,9 @@
-<p>home works!</p>
+<p>TODOS</p>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+  <input name="title" ngModel required #title="ngModel">
+  <button>Submit</button>
+</form>
+
+<li *ngFor="let todo of todos">
+  {{todo.id}} - {{ todo.title}} - {{todo.status}}
+</li>

@@ -1,7 +1,6 @@
-<div class="content" role="main">
+<p> CLOSED TODOS</p>
 
-  <li *ngFor="let todo of todos">
-    {{ todo.title}}
+<li *ngFor="let todo of todos">
+    {{todo.id}} - {{ todo.title}} - {{todo.status}}
   </li>
 
-</div>
