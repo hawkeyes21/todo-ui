@@ -1,6 +1,8 @@
-<p> OPEN TODOS</p>
-
-  <li *ngFor="let todo of todos">
-    {{todo.id}} - {{ todo.title}} - {{todo.status}}
+<div class="container">
+  <h1 class="display-2">Open Todos</h1>
+  <br/>
+  <li *ngFor="let todo of todos" class="list-group-item">
+    {{ todo.title}}
   </li>
 
+</div>

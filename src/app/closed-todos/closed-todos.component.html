@@ -1,6 +1,8 @@
-<p> CLOSED TODOS</p>
+<div class="container">
+  <h1 class="display-2">Closed Todos</h1>
+  <br/>
 
-<li *ngFor="let todo of todos">
-    {{todo.id}} - {{ todo.title}} - {{todo.status}}
+<li *ngFor="let todo of todos" class="list-group-item">
+  <del>{{ todo.title}}</del>
   </li>
-
+</div>

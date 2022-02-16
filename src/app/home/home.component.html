@@ -1,9 +1,13 @@
-<p>TODOS</p>
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-  <input name="title" ngModel required #title="ngModel">
-  <button>Submit</button>
-</form>
-
-<li *ngFor="let todo of todos">
-  <input type="checkbox" (change)="fieldsChange(todo)" value="angular"> {{todo.id}} - {{ todo.title}} - {{todo.status}}
-</li>
+<div class="container">
+  <h1 class="display-2">Todos</h1>
+  <div class="form-group">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+      <input class="form-control" name="title" ngModel required #title="ngModel" placeholder="add a todo">
+      <br/>
+      <button class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <li *ngFor="let todo of todos" class="list-group-item">
+    <input type="checkbox" (change)="fieldsChange(todo)" value="angular"> {{ todo.title }}
+  </li>
+</div>
